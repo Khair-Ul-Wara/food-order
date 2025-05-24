@@ -125,10 +125,23 @@ table th {
     font-weight: bold;
     padding: 12px 15px;
 }
+table th:nth-child(1), table td:nth-child(1) { width: 5%; }   /* Sr.No */
+table th:nth-child(2), table td:nth-child(2) { width: 15%; min-width: 120px; }  /* Title */
+table th:nth-child(3), table td:nth-child(3) { width: 25%; min-width: 200px; }  /* Description */
+table th:nth-child(4), table td:nth-child(4) { width: 8%; }   /* Price */
+table th:nth-child(5), table td:nth-child(5) { width: 12%; }  /* Image */
+table th:nth-child(6), table td:nth-child(6) { width: 10%; }  /* Category */
+table th:nth-child(7), table td:nth-child(7) { width: 8%; }  /* Featured */
+table th:nth-child(8), table td:nth-child(8) { width: 8%; }   /* Active */
+table th:nth-child(9), table td:nth-child(9) { width: 9%; min-width: 150px; }   /* Actions */
+
 
 table td {
     padding: 12px 15px;
     border-bottom: 1px solid #dddddd;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 table tr:nth-of-type(even) {
@@ -167,4 +180,55 @@ table tr:hover {
 .footer {
     background-color: #ff4757;
     color: white
+}
+/*css for form*/
+.login{
+    width: 20%;
+    margin: 10% auto;
+    padding: 2%;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+    box-sizing: border-box;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.login input[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 500;
+}
+
+.login input[type="submit"]:hover {
+    background-color: #2980b9;
 }

@@ -3,6 +3,7 @@
     <title>Admin Panel</title>
     <link rel="stylesheet" type="text/css" href="../css/admin.css">
     <?php include('../config/constants.php'); ?>
+    <?php include('login-check.php'); ?>
 
 </head>
 <body>
@@ -14,6 +15,7 @@
             <li><a href="manage-category.php"> Category</a></li>
             <li><a href="manage-food.php"> Food</a></li>
             <li><a href="manage-order.php"> Order</a></li>
+            <li><a href="logout.php">Logout</a></li>
             
         </ul>
 </div>
