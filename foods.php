@@ -1,6 +1,15 @@
 <?php include('partials/menu.php'); ?>
 
+<section class="food-search text-center">
+        <div class="container">
+            
+            <form action="<?php echo SITEURL;?>food-search.php" method="POST">
+                <input type="search" name="search" placeholder="Search for Food.." required>
+                <input type="submit" name="submit" value="Search" class="btn btn-primary">
+            </form>
 
+        </div>
+    </section>
 
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
@@ -46,7 +55,7 @@
                                 <?php echo $description; ?>
                             </p>
                             <br>
-                            <a href="#" class="btn btn-primary">Order Now</a>   
+                            <a href="<?php echo SITEURL; ?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
                         </div>
                     </div>
                     <?php
